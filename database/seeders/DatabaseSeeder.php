@@ -21,42 +21,38 @@ class DatabaseSeeder extends Seeder
             'email' => 'test@example.com',
         ]);*/
 
-        /*DB::table('movies')->insert( [[
+        DB::table('movies')->insert( [
+            [
                 'title' => 'Inception',
-                'year' => '16/07/2010',
+                'year' => '2010-07-16',
                 'note' => 9.0,
                 'comment' => 'Un thriller de science-fiction qui brouille les frontières entre rêve et réalité. Visuellement impressionnant, avec un scénario complexe.'
             ],
             [
                 'title' => 'Le Fabuleux Destin d’Amélie Poulain',
-                'year' => '25/04/2001',
+                'year' => '2001-04-25',
                 'note' => 8.3,
                 'comment' => 'Un film poétique et coloré qui célèbre les petites joies de la vie. Audrey Tautou y est lumineuse.'
             ],
             [
                 'title' => 'Interstellar',
-                'year' => '05/11/2014',
+                'year' => '2014-11-05',
                 'note' => 9.2,
                 'comment' => 'Une épopée spatiale intense avec une forte charge émotionnelle. La musique et les images sont inoubliables.'
             ],
             [
                 'title' => 'Intouchables',
-                'year' => '02/11/2011',
+                'year' => '2011-11-02',
                 'note' => 8.5,
                 'comment' => 'Une belle leçon d’amitié et d’humanité. Un duo d’acteurs inoubliable et beaucoup d’humour.'
             ],
             [
                 'title' => 'Parasite',
-                'year' => '21/05/2019',
+                'year' => '2019-05-21',
                 'note' => 9.1,
                 'comment' => 'Un chef-d’œuvre social entre drame et comédie noire. Chaque plan est millimétré, le suspense monte crescendo.'
-            ]]);*/
-
-        DB::table('movies')->insert([
-            'title' => 'Inception',
-            'year' => '16/07/2010',
-            'note' => 9.0,
-            'comment' => 'Un thriller de science-fiction qui brouille les frontières entre rêve et réalité. Visuellement impressionnant, avec un scénario complexe.'
+            ]
         ]);
+
     }
 }
