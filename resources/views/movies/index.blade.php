@@ -21,8 +21,8 @@
                         <td>{{ $movie->note }}</td>
                         <td>{{ $movie->comment }}</td>
                         <td>
-                            <a href="{{ route('tasks.edit', $movie->id) }}" class="btn btn-warning btn-sm">Edit</a>
-                            <form action="{{ route('tasks.destroy', $movie->id) }}" method="POST" style="display:inline;">
+                            <a href="{{ route('movies.edit', $movie->id) }}" class="btn btn-warning btn-sm">Edit</a>
+                            <form action="{{ route('movies.destroy', $movie->id) }}" method="POST" style="display:inline;">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger btn-sm">Delete</button>
