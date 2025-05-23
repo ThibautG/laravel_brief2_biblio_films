@@ -41,7 +41,7 @@ class MovieController extends Controller
         $request->validate([
             'title' => 'required|string|max:255',
             'year' => 'required|date',
-            'note' => 'required|number|max:10',
+            'note' => 'required|numeric|max:10',
             'comment' => 'required|string',
         ]);
 

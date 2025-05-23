@@ -13,13 +13,14 @@
 
 </head>
 <body class="bg-light text-dark d-flex flex-column align-items-center p-4 p-lg-5 min-vh-100">
-<div class="container">
-
+{{--<div class="container">--}}
+<header>
     <h1>Movie Manager</h1>
     <a href="{{ route('movies.create') }}" class="btn btn-primary mb-3">Create Movie</a>
-
+</header>
+<main class="container">
     {{$slot}}
-
-</div>
+</main>
+{{--</div>--}}
 </body>
 </html>
