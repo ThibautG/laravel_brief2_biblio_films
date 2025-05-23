@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
             'email' => 'test@example.com',
         ]);*/
 
-        DB::table('movies')->insert( [[
+        /*DB::table('movies')->insert( [[
                 'title' => 'Inception',
                 'year' => '16/07/2010',
                 'note' => 9.0,
@@ -50,6 +50,13 @@ class DatabaseSeeder extends Seeder
                 'year' => '21/05/2019',
                 'note' => 9.1,
                 'comment' => 'Un chef-d’œuvre social entre drame et comédie noire. Chaque plan est millimétré, le suspense monte crescendo.'
-            ]]);
+            ]]);*/
+
+        DB::table('movies')->insert([
+            'title' => 'Inception',
+            'year' => '16/07/2010',
+            'note' => 9.0,
+            'comment' => 'Un thriller de science-fiction qui brouille les frontières entre rêve et réalité. Visuellement impressionnant, avec un scénario complexe.'
+        ]);
     }
 }
