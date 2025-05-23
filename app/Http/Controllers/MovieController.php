@@ -4,12 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Models\Movie;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class MovieController extends Controller
 {
     public function index()
     {
-        $movies = Movie::all();
+        /*$movies = Movie::all();*/
+        $movies = DB::table("movies")->orderBy('note', 'DESC')->get();
         return view('movies.index', compact('movies'));
     }
 
@@ -53,6 +55,11 @@ class MovieController extends Controller
     {
         $movie->delete();
         return redirect()->route('movies.index')->with('success', 'Movie deleted successfully.');
+    }
+
+    public function sortAscTitle()
+    {
+        return redirect()->route('movies.index');
     }
 
 }

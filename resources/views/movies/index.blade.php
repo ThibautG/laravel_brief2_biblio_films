@@ -5,11 +5,29 @@
         <table class="table table-bordered">
             <thead>
             <tr>
-                <th>Titre</th>
-                <th>Année</th>
-                <th>Note</th>
-                <th>Commentaire</th>
-                <th>Actions</th>
+                <th>
+                    <p>Titres</p>
+                    <div class="d-flex">
+                        <a>⬆️</a>
+                        <a>⬇️</a>
+                    </div>
+                </th>
+                <th>
+                    <p>Années</p>
+                    <div class="d-flex">
+                        <a>⬆️</a>
+                        <a>⬇️</a>
+                    </div>
+                </th>
+                <th>
+                    <p>Notes</p>
+                    <div class="d-flex">
+                        <a>⬆️</a>
+                        <a>⬇️</a>
+                    </div>
+                </th>
+                <th><p>Commentaires</p></th>
+                <th><p>Actions</p></th>
             </tr>
             </thead>
             <tbody>
@@ -20,8 +38,11 @@
                     <td>{{ $movie->note }}</td>
                     <td>{{ $movie->comment }}</td>
                     <td>
-                        <a href="{{ route('movies.edit', $movie->id) }}" class="btn btn-warning btn-sm">Modifier</a>
-                        <form action="{{ route('movies.destroy', $movie->id) }}" method="POST" style="display:inline;">
+                        <a href="{{ route('movies.edit', $movie->id) }}"
+                           class="btn btn-warning btn-sm">Modifier</a>
+                        <form action="{{ route('movies.destroy', $movie->id) }}"
+                              method="POST"
+                              style="display:inline;">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-danger btn-sm">Supprimer</button>
