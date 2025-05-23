@@ -1,5 +1,5 @@
 <x-layout>
-    <h2>Edit Movie</h2>
+    <h2>Modifier un film</h2>
     <form action="{{ route('movies.update', $movie->id) }}" method="POST">
         @csrf
         @method('PUT')
@@ -19,6 +19,6 @@
             <label for="comment">Commentaire</label>
             <textarea name="comment" id="comment" class="form-control" required>{{ $movie->comment }}</textarea>
         </div>
-        <button type="submit" class="btn btn-success">Save</button>
+        <button type="submit" class="btn btn-success">Modifier</button>
     </form>
 </x-layout>
