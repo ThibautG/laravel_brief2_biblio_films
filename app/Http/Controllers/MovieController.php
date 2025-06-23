@@ -10,8 +10,7 @@ class MovieController extends Controller
 {
     public function index()
     {
-        /*$movies = Movie::all();*/
-        $movies = DB::table("movies")->orderBy('note', 'DESC')->get();
+        $movies = Movie::all();
         return view('movies.index', compact('movies'));
     }
 
@@ -57,9 +56,46 @@ class MovieController extends Controller
         return redirect()->route('movies.index')->with('success', 'Movie deleted successfully.');
     }
 
-    public function sortAscTitle()
+    public function search()
     {
-        return redirect()->route('movies.index');
+        $search = request('search');
+        $movies = Movie::where('title', 'LIKE', '%' . $search . '%')->get();
+        return view('movies.index', compact('movies'));
     }
 
+    public function sortAscTitle()
+    {
+        $movies = Movie::query()->orderBy('title', 'ASC')->get();
+        return view('movies.index', compact('movies'));
+    }
+
+    public function sortDescTitle()
+    {
+        $movies = Movie::query()->orderBy('title', 'DESC')->get();
+        return view('movies.index', compact('movies'));
+    }
+
+    public function sortAscYear()
+    {
+        $movies = Movie::query()->orderBy('year', 'ASC')->get();
+        return view('movies.index', compact('movies'));
+    }
+
+    public function sortDescYear()
+    {
+        $movies = Movie::query()->orderBy('year', 'DESC')->get();
+        return view('movies.index', compact('movies'));
+    }
+
+    public function sortAscNote()
+    {
+        $movies = Movie::query()->orderBy('note', 'ASC')->get();
+        return view('movies.index', compact('movies'));
+    }
+
+    public function sortDescNote()
+    {
+        $movies = Movie::query()->orderBy('note', 'DESC')->get();
+        return view('movies.index', compact('movies'));
+    }
 }

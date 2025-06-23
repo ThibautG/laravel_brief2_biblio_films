@@ -1,61 +1,57 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Brief 2 Laravel : Gestion d'une bibliothèque de film
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+L'entreprise FavMovies souhaite pouvoir publier des titres de films sur son site internet en indiquant une évaluation du film. En tant que prestataire, votre mission est de comprendre le besoin de l'entreprise et de mettre en place les fonctionnalités demandées.
 
-## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Ressources
+- [Doc Laravel 12.x](https://laravel.com/docs/12.x)
+- [CRUD avec Laravel](https://medium.com/%40rokisheik/crud-application-in-laravel-12-step-by-step-guide-543f0c24bdd3)
+- [CRUD avec Laravel (un autre)](https://www.kritimyantra.com/blogs/laravel-12-blog-crud-image-upload)
+- [Les controleurs Lavarel](https://kritimyantra.com/blogs/laravel-12-controllers-a-comprehensive-guide-with-examples)
+- [Eloquent](https://laravel.com/docs/12.x/eloquent-relationships)
+- [Eloquent (video fr)](https://www.youtube.com/watch?v=vX6kJzjgL2s)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Contexte du projet
+Vous êtes chargés de créer une application web permettant à un utilisateur de lister, ajouter, modifier et supprimer des films.
 
-## Learning Laravel
+Le client souhaite pouvoir trier les films par note ou par année.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Modalités pédagogiques
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Objectifs :
+- Reproduire un CRUD avec ajout de tri/filtre
+- Utiliser les requêtes Eloquent
+- Tri par note
+- Filtre pour afficher les films récents
+- Filtre pour afficher les films les mieux notés
+- Affichage dynamique des données
 
-## Laravel Sponsors
+### Étapes :
+1. Créer un projet Laravel
+2. Créer une base de données SQLite (touch database/database.sqlite)
+3. Modifier le fichier .env pour lui indiquer de travailler avec SQLite
+4. Créer modèle + migration + contrôleur (modèle avec titre, année, note, commentaire)
+5. Écrire la migration
+6. Lancer la migration
+7. Gérer les routes
+8. Créer les vues Blade (avec filtres et tri)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
 
-### Premium Partners
+## Modalités d'évaluation
+- Construction d'une application web fonctionnelle
+- Revue de code demandée durant le brief par le formateur avec démonstration du fonctionnement.
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
 
-## Contributing
+## Livrables
+- Lien vers le code source sur GitHub
+- Document Word avec captures d'écran des vues principales
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Critères de performance
+- Le CRUD fonctionne parfaitement
+- L’affichage est lisible
+- Les routes et vues sont cohérentes
+- Les données sont bien enregistrées
+- Le tri et les filtres fonctionnent
