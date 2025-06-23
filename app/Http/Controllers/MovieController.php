@@ -59,7 +59,10 @@ class MovieController extends Controller
     public function search()
     {
         $search = request('search');
-        $movies = Movie::where('title', 'LIKE', '%' . $search . '%')->get();
+        $movies = Movie::where('title', 'LIKE', '%' . $search . '%')
+            -> orWhere('year', 'LIKE', '%' . $search . '%')
+            -> orWhere('note', 'LIKE', '%' . $search . '%')
+            ->get();
         return view('movies.index', compact('movies'));
     }
 

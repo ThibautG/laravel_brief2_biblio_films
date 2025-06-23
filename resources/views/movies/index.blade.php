@@ -8,7 +8,7 @@
         >
             @csrf
             <span class="input-group-text bt" id="basic-addon1">🔍</span>
-            <input type="text" class="form-control" placeholder="Rechercher un titre de film"
+            <input type="text" class="form-control" placeholder="Rechercher (titre, année ou note)"
                    aria-label="Rechercher" aria-describedby="basic-addon1"
                    name="search"
             >
